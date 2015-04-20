@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--secondScreen-->
+        <scene sceneID="nHX-Ww-EJW">
+            <objects>
+                <controller identifier="secondScreen" id="aFT-z4-THP">
+                    <items>
+                        <label alignment="left" text="Second Page" id="Qhy-1A-fZx"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="460" y="365"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HelloWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Hello, Apple Watch!" textAlignment="left" numberOfLines="0" id="Za3-us-ef5">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="1" alignment="left" title="Button" id="rlk-O8-W6B">
+                            <connections>
+                                <action selector="buttonTapped" destination="AgC-eL-Hgc" id="qvx-Iy-kDB"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="wa6-lS-Zmf">
+                            <items>
+                                <tableRow identifier="MyRow" id="HWT-Fz-0r8" customClass="MyRow" customModule="HelloWatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="LWb-sP-YUp">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Hi" textAlignment="left" id="TpK-tt-Jqt"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="TpK-tt-Jqt" id="97j-e0-ypb"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="Za3-us-ef5" id="6vx-Sk-p5f"/>
+                        <outlet property="myTable" destination="wa6-lS-Zmf" id="duz-Z4-g2P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="365.75"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="extraLarge" bottomTemplateType="body6Footer" id="0uZ-2p-rRc" customClass="GlanceController" customModule="HelloWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Glance" minimumScaleFactor="0.0" id="4uP-eb-gwX"/>
+                        <label alignment="left" text="Hello, Apple Watch!" id="W5Z-Xb-FLN"/>
+                        <label alignment="left" text="Extra Info Can Go Here" id="rL4-5V-HfO"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="mot-qR-1oq">
+            <objects>
+                <notificationController id="9oG-iz-OMu">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="gGy-or-bLX"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="messageReceived" id="qi9-G2-wYy">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sashColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="gGy-or-bLX" id="4l8-FU-wXb"/>
+                        <segue destination="jO6-ie-Lq9" kind="relationship" relationship="dynamicNotificationInterface" id="vW5-MU-mS1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1250"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="bFB-0V-ueT">
+            <objects>
+                <controller id="jO6-ie-Lq9" customClass="NotificationController" customModule="HelloWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Message!!" id="0Bv-tQ-IW0"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="kHd-OG-aBT"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="535" y="1250"/>
+        </scene>
+    </scenes>
+</document>
