@@ -22,7 +22,7 @@ class InterfaceController: WKInterfaceController {
         
         // The userInfo dict contains the data that was 
         // provided to updateUserActivity.
-        println("Launched from user-activity (aka glance): \(userInfo)")
+        print("Launched from user-activity (aka glance): \(userInfo)")
     }
     // END glance_handle_activity
     
