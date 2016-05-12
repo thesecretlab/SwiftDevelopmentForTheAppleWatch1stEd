@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  HelloWatch
 //
-//  Created by Jon Manning on 9/03/2015.
-//  Copyright (c) 2015 Secret Lab. All rights reserved.
+//  Created by Jon Manning on 2/03/2016.
+//  Copyright © 2016 Secret Lab. All rights reserved.
 //
 
 import UIKit
@@ -16,44 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // BEGIN notification_action
-        let replyAction = UIMutableUserNotificationAction()
-        replyAction.identifier = "replyToMessage"
-        replyAction.title = "Reply"
-        // END notification_action
-        
-        // BEGIN notification_category
-        let messageReceivedCategory = UIMutableUserNotificationCategory()
-                messageReceivedCategory.identifier = "messageReceived"
-        
-        // The Default context is the lock screen.
-        messageReceivedCategory.setActions([replyAction],
-            forContext: UIUserNotificationActionContext.Default)
-        
-        // The Minimal context is when the user pulls down on a notification banner.
-        messageReceivedCategory.setActions([replyAction],
-            forContext: UIUserNotificationActionContext.Minimal)
-        // END notification_category
-            
-        
-        // BEGIN notification_settings
-        let settings = UIUserNotificationSettings(
-            forTypes: [
-                UIUserNotificationType.Alert,
-                UIUserNotificationType.Badge,
-                UIUserNotificationType.Sound
-            ], categories: [messageReceivedCategory]
-        )
-        // END notification_settings
-        
-        // BEGIN notification_settings_register
-        UIApplication.sharedApplication()
-            .registerUserNotificationSettings(settings)
-        // END notification_settings_register
-
-        UIApplication.sharedApplication().registerForRemoteNotifications()
-        
         return true
     }
 
@@ -78,19 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
-    // BEGIN useractivity_handle
-    func application(application: UIApplication,
-         continueUserActivity userActivity: NSUserActivity,
-                        restorationHandler: ([AnyObject]?) -> Void) -> Bool {
-        
-        print("Handling activity \(userActivity.activityType) " +
-            "(parameters: \(userActivity.userInfo)")
-        return true
-    }
-    // END useractivity_handle
-    
 
 
 }

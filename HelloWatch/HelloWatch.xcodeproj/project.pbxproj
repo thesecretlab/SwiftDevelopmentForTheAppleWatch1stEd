@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6879940D1C87EAD100DE4D71 /* Sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6879940C1C87EAD100DE4D71 /* Sound.m4a */; };
+		6879940E1C87EAD200DE4D71 /* Sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6879940C1C87EAD100DE4D71 /* Sound.m4a */; };
+		687994101C87EB4A00DE4D71 /* MediaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6879940F1C87EB4A00DE4D71 /* MediaInterfaceController.swift */; };
+		687994121C88059D00DE4D71 /* Video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 687994111C88059C00DE4D71 /* Video.m4v */; };
+		687994131C88059D00DE4D71 /* Video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 687994111C88059C00DE4D71 /* Video.m4v */; };
 		68BA88B41AAE4A2D00524557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA88B31AAE4A2D00524557 /* AppDelegate.swift */; };
 		68BA88B61AAE4A2D00524557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA88B51AAE4A2D00524557 /* ViewController.swift */; };
 		68BA88B91AAE4A2D00524557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BA88B71AAE4A2D00524557 /* Main.storyboard */; };
@@ -75,6 +80,9 @@
 /* Begin PBXFileReference section */
 		6853A6531ABCDB6700415630 /* HelloWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HelloWatch.entitlements; sourceTree = "<group>"; };
 		6853A6541ABCDDE600415630 /* HelloWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "HelloWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		6879940C1C87EAD100DE4D71 /* Sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.m4a; sourceTree = SOURCE_ROOT; };
+		6879940F1C87EB4A00DE4D71 /* MediaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaInterfaceController.swift; sourceTree = "<group>"; };
+		687994111C88059C00DE4D71 /* Video.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.m4v; sourceTree = SOURCE_ROOT; };
 		68BA88AE1AAE4A2D00524557 /* HelloWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BA88B21AAE4A2D00524557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68BA88B31AAE4A2D00524557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,8 +197,11 @@
 			children = (
 				6853A6541ABCDDE600415630 /* HelloWatch WatchKit Extension.entitlements */,
 				68BA88DC1AAE4A6900524557 /* InterfaceController.swift */,
+				6879940F1C87EB4A00DE4D71 /* MediaInterfaceController.swift */,
 				68BA88DE1AAE4A6900524557 /* NotificationController.swift */,
 				68BA88E01AAE4A6900524557 /* GlanceController.swift */,
+				6879940C1C87EAD100DE4D71 /* Sound.m4a */,
+				687994111C88059C00DE4D71 /* Video.m4v */,
 				68BA88E21AAE4A6900524557 /* Images.xcassets */,
 				68BA88D91AAE4A6900524557 /* Supporting Files */,
 			);
@@ -314,7 +325,7 @@
 						DevelopmentTeam = 5V2A4389PA;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -327,12 +338,13 @@
 						DevelopmentTeam = 5V2A4389PA;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
 					68BA88E51AAE4A6900524557 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5V2A4389PA;
 					};
 				};
 			};
@@ -379,7 +391,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6879940D1C87EAD100DE4D71 /* Sound.m4a in Resources */,
 				68BA88E31AAE4A6900524557 /* Images.xcassets in Resources */,
+				687994121C88059D00DE4D71 /* Video.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BA88EF1AAE4A6900524557 /* Interface.storyboard in Resources */,
+				687994131C88059D00DE4D71 /* Video.m4v in Resources */,
 				68BA88F11AAE4A6900524557 /* Images.xcassets in Resources */,
+				6879940E1C87EAD200DE4D71 /* Sound.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +434,7 @@
 			files = (
 				68BA88DF1AAE4A6900524557 /* NotificationController.swift in Sources */,
 				68BA88DD1AAE4A6900524557 /* InterfaceController.swift in Sources */,
+				687994101C87EB4A00DE4D71 /* MediaInterfaceController.swift in Sources */,
 				68BA88E11AAE4A6900524557 /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,11 +568,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloWatch/HelloWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HelloWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -566,11 +583,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HelloWatch/HelloWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HelloWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -615,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -634,6 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = HelloWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "HelloWatch WatchKit App/Info.plist";
@@ -648,7 +667,6 @@
 		68BA88F91AAE4A6900524557 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "HelloWatch WatchKit Extension/HelloWatch WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -669,7 +687,6 @@
 		68BA88FA1AAE4A6900524557 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "HelloWatch WatchKit Extension/HelloWatch WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "HelloWatch WatchKit Extension/Info.plist";

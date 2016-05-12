@@ -31,14 +31,18 @@ class NotificationController: WKUserNotificationInterfaceController {
 
     
     // BEGIN notification_handlers
-    override func didReceiveLocalNotification(localNotification: UILocalNotification, withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+    override func didReceiveLocalNotification(
+        localNotification: UILocalNotification, withCompletion
+            completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         // The iOS app received a local notification; set up our interface
         
         // When done, call completionHandler and pass .Custom.
         completionHandler(.Custom)
     }
     
-    override func didReceiveRemoteNotification(remoteNotification: [NSObject : AnyObject], withCompletion completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
+    override func didReceiveRemoteNotification(
+        remoteNotification: [NSObject : AnyObject], withCompletion
+            completionHandler: ((WKUserNotificationInterfaceType) -> Void)) {
         // The iOS app received a local notification; set up our interface
         
         // When done, call completionHandler and pass .Custom.
