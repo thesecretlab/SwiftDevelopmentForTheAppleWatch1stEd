@@ -11,7 +11,7 @@ More info at [Secret Lab](http://www.secretlab.com.au/books/).
 You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 
 ## Notes
-This repository is up to date with Xcode 6.3 and Swift 1.2. 
+This repository is up to date with Xcode 7.3, watchOS 2, and Swift 2.2.
 
 ## License
 
